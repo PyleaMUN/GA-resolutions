@@ -25,10 +25,10 @@
             line-height: 1.6;
         }
 
-        /* HEADER STYLES - Drastically Reduced Height */
+        /* HEADER STYLES */
         header {
             text-align: center;
-            padding: 10px 10px; /* Reduced from 40px */
+            padding: 10px 10px;
             background: linear-gradient(to bottom, var(--cream), #f0ece4);
             border-bottom: 3px solid var(--gold);
             display: flex;
@@ -38,7 +38,7 @@
         }
 
         .logo {
-            max-width: 80px; /* Reduced from 180px */
+            max-width: 80px;
             display: block;
             margin: 0 auto 5px auto;
             mix-blend-mode: multiply; 
@@ -49,13 +49,13 @@
             font-family: 'Times New Roman', serif;
             letter-spacing: 1px;
             margin: 0;
-            font-size: 1.4rem; /* Reduced size */
+            font-size: 1.4rem;
             text-transform: uppercase;
         }
 
         h2 {
             color: var(--gold);
-            font-size: 0.9rem; /* Reduced size */
+            font-size: 0.9rem;
             margin: 2px 0 0 0;
         }
 
@@ -67,6 +67,40 @@
             font-size: 1.1em;
             font-style: italic;
             border-bottom: 4px solid var(--gold);
+        }
+
+        /* PRINT BUTTON STYLES */
+        .action-bar {
+            text-align: center;
+            margin: 20px 0 0 0;
+            padding: 0 20px;
+        }
+
+        .print-btn {
+            background-color: var(--teal);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .print-btn:hover {
+            background-color: var(--teal-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+
+        .print-btn::before {
+            content: "🖨️"; 
+            font-size: 1.2em;
         }
 
         .container {
@@ -174,9 +208,98 @@
             font-size: 0.9em;
         }
 
+        /* SCREEN RESPONSIVENESS */
         @media (max-width: 900px) {
             .container {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            @page {
+                margin: 2cm;
+                size: A4;
+            }
+
+            /* Hide interactive elements */
+            .action-bar, .print-btn, .footer {
+                display: none !important;
+            }
+
+            /* Reset Body */
+            body {
+                background-color: white;
+                color: black;
+                font-size: 11pt; /* Optimum print size */
+            }
+
+            /* Header Adjustments for Print */
+            header {
+                background: none;
+                border-bottom: 1px solid #000;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            .logo {
+                max-width: 60px; /* Even smaller for print to save space */
+            }
+            .topic-banner {
+                background: none;
+                color: black;
+                border-bottom: 1px solid #000;
+                padding: 10px 0;
+                font-weight: bold;
+            }
+
+            /* Layout: Stack columns vertically */
+            .container {
+                display: block;
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Card Styling Reset */
+            .bloc-column {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                margin: 0;
+                border-top: none; /* Remove colorful top borders */
+                page-break-inside: auto;
+            }
+
+            /* Pagination Logic */
+            
+            /* Start Bloc 2 on a new page */
+            .bloc-column:nth-child(2) {
+                page-break-before: always;
+                margin-top: 0;
+            }
+
+            /* Prevent splitting clauses awkwardly */
+            li, p, h1, h2, h3 {
+                page-break-inside: avoid;
+            }
+
+            .bloc-header {
+                border-bottom: 1px solid #000;
+                margin-bottom: 20px;
+            }
+
+            .resolution-text strong {
+                color: black; /* Force black ink */
+            }
+            
+            .resolution-text > ol > li::before {
+                color: black;
+            }
+
+            /* Add visual cues for links if any exist */
+            a {
+                text-decoration: none;
+                color: black;
             }
         }
     </style>
@@ -191,6 +314,10 @@
 
     <div class="topic-banner">
         TOPIC: Human Rights or Cultural Relativism: Can Universal Norms Truly Exist?
+    </div>
+
+    <div class="action-bar">
+        <button class="print-btn" onclick="window.print()">Print Resolutions / Save to PDF</button>
     </div>
 
     <div class="container">
