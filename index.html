@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyleaMUN - GA Plenary Session</title>
+    <style>
+        :root {
+            /* Palette derived from PyleaMUN Logo */
+            --teal: #125664;
+            --teal-light: #2A7B8C;
+            --gold: #D4AF37;
+            --gold-light: #F4D06F;
+            --cream: #FDFBF7;
+            --text-dark: #222222;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* HEADER STYLES - Drastically Reduced Height */
+        header {
+            text-align: center;
+            padding: 10px 10px; /* Reduced from 40px */
+            background: linear-gradient(to bottom, var(--cream), #f0ece4);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 80px; /* Reduced from 180px */
+            display: block;
+            margin: 0 auto 5px auto;
+            mix-blend-mode: multiply; 
+        }
+
+        h1 {
+            color: var(--teal);
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 1px;
+            margin: 0;
+            font-size: 1.4rem; /* Reduced size */
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: var(--gold);
+            font-size: 0.9rem; /* Reduced size */
+            margin: 2px 0 0 0;
+        }
+
+        .topic-banner {
+            background-color: var(--teal);
+            color: var(--white);
+            text-align: center;
+            padding: 15px;
+            font-size: 1.1em;
+            font-style: italic;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .bloc-column {
+            background: var(--white);
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 40px;
+            border-top: 6px solid var(--teal);
+        }
+
+        .bloc-column.bloc-1 {
+            border-top-color: var(--gold);
+        }
+
+        .bloc-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .bloc-title {
+            color: var(--teal);
+            font-size: 1.8rem;
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .bloc-subtitle {
+            font-style: italic;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .resolution-text {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.05em;
+            text-align: justify; 
+            color: #000;
+        }
+
+        .resolution-text p {
+            margin-bottom: 15px;
+        }
+
+        .resolution-text strong {
+            font-weight: bold;
+            color: var(--teal);
+        }
+
+        /* List Styling */
+        .resolution-text ol {
+            counter-reset: item;
+            padding-left: 30px;
+        }
+
+        .resolution-text > ol > li {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .resolution-text > ol > li::before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            font-weight: bold;
+            color: var(--teal);
+            margin-right: 5px;
+        }
+
+        .resolution-text ol ol {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .resolution-text ol ol li {
+            list-style-type: lower-alpha;
+            margin-bottom: 5px;
+        }
+        
+        .resolution-text ol ol li::before {
+            content: none;
+        }
+
+        .resolution-text ol ol ol li {
+            list-style-type: lower-roman;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--teal);
+            color: var(--white);
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="PyleaMUN Logo" class="logo">
+        <h1>PyleaMUN General Assembly</h1>
+        <h2>1st Middle School of Pylea, Thessaloniki</h2>
+    </header>
+
+    <div class="topic-banner">
+        TOPIC: Human Rights or Cultural Relativism: Can Universal Norms Truly Exist?
+    </div>
+
+    <div class="container">
+        
+        <div class="bloc-column bloc-1">
+            <div class="bloc-header">
+                <h3 class="bloc-title">DRAFT RESOLUTION: BLOC 1</h3>
+                <div class="bloc-subtitle">Focus: Cultural Context & Sovereignty</div>
+            </div>
+            
+            <div class="resolution-text">
+                <p><strong>SUBMITTED BY:</strong> Bloc 1<br>
+                <strong>COMMITTEE:</strong> General Assembly</p>
+
+                <p><strong>THE GENERAL ASSEMBLY,</strong></p>
+
+                <p><strong>Bearing in mind</strong> “The African Charter on Human and Peoples' Rights” (1981), which integrates individual rights with collective rights and duties, reflecting regional cultural values while upholding international human rights norms,</p>
+                
+                <p><strong>Taking into consideration</strong> “The Bangkok Declaration” (1993), which emphasizes the role of national sovereignty, regional context, and economic development in the realization of human rights,</p>
+                
+                <p><strong>Recognizing</strong> the ASEAN Human Rights Declaration as the regulatory and political framework for human rights within the Association of Southeast Asian Nations,</p>
+                
+                <p><strong>Recalling</strong> “The Vienna Declaration and Programme of Action” (1993), which reaffirmed the universality of all human rights while acknowledging the importance of national, regional, historical, cultural, and religious particularities,</p>
+                
+                <p><strong>Affirming</strong> that respect for cultural diversity and the protection of universal human dignity are not mutually exclusive but must be pursued in a complementary and balanced manner,</p>
+
+                <ol>
+                    <li><strong>Encourages</strong> all Member States to create a balanced environment that allows universal human rights to co-exist with cultural relativism by:
+                        <ol>
+                            <li>Fostering the implementation of Human Rights in a manner that respects diversity;</li>
+                            <li>Requesting that certain Conventions are compatible with Sharia Law and other religious traditions in order to respect tolerance and promote equality and justice within cultural identity;</li>
+                        </ol>
+                    </li>
+                    <li><strong>Calls upon</strong> Member States to support regional and international dialogue to promote universal human rights while respecting cultural contexts by:
+                        <ol>
+                            <li>Encouraging cooperation between governments, civil society organizations, and traditional and religious leaders to improve understanding and acceptance of human rights based on cultural, religious, and traditional norms;</li>
+                            <li>Strengthening human rights education through:
+                                <ol>
+                                    <li>School curricula that incorporate both international principles and cultural values;</li>
+                                    <li>Community-based awareness programs, particularly in rural and underserved areas, ensuring that cultural practices and interpretations are not used to justify violations of fundamental rights;</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Draws attention</strong> to diverse cultures by:
+                        <ol>
+                            <li>Endorsing the expression of different ethnic groups and safeguarding ethnic groups to ensure they are not diminished by dominant Western cultures;</li>
+                            <li>Emphasizing the rights of minorities by raising public awareness through:
+                                <ol>
+                                    <li>Organizing festivals and cultural appreciation days for non-Western cultures;</li>
+                                    <li>Encouraging school curricula to include the study of a wider range of cultures;</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Invites</strong> Member States to respect the principle of cultural relativism, as there are historical and cultural links that are inextricably linked to how human rights are interpreted and applied;</li>
+                    
+                    <li><strong>Requests</strong> international actors to consult with national governments before recommending policies or interventions that may conflict with cultural and/or religious practices, thereby disrupting community harmony;</li>
+                    
+                    <li><strong>Advocates</strong> the creation of human rights frameworks that are culturally and regionally appropriate, complementing current international instruments and taking into account local realities and civilizational contexts;</li>
+                    
+                    <li><strong>Proposes</strong> states within the same geographic or cultural area voluntarily draft regional human rights charters by:
+                        <ol>
+                            <li>Affirming that common regional customs and social values should be reflected in such frameworks;</li>
+                            <li>Permitting implementation flexibility while preserving human dignity;</li>
+                            <li>Opposing one-size-fits-all, externally imposed models;</li>
+                            <li>Increasing regional control over human rights procedures.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="bloc-column">
+            <div class="bloc-header">
+                <h3 class="bloc-title">DRAFT RESOLUTION: BLOC 2</h3>
+                <div class="bloc-subtitle">Focus: Universal Norms & Oversight</div>
+            </div>
+
+            <div class="resolution-text">
+                <p><strong>SUBMITTED BY:</strong> Bloc 2<br>
+                <strong>COMMITTEE:</strong> General Assembly</p>
+
+                <p><strong>THE GENERAL ASSEMBLY,</strong></p>
+
+                <p><strong>Guided by</strong> the Universal Declaration of Human Rights (UDHR) signed on the tenth of December 1948, which proclaims that all human beings are born free and equal in dignity and rights,</p>
+                
+                <p><strong>Emphasizing</strong> the European Convention on Human Rights of 1953 and its importance in protecting human and political freedoms in Europe,</p>
+                
+                <p><strong>Recalling</strong> the purposes and principles of the Charter of the United Nations, particularly in the promotion of human rights, fundamental freedoms, and respect for the equal dignity of all peoples,</p>
+                
+                <p><strong>Recalling also</strong> the UNESCO Universal Declaration on Cultural Diversity (2001), which affirms that cultural diversity is a “common heritage of humanity” and stresses that respect for cultural diversity must be inseparable from respect for human rights and fundamental freedoms,</p>
+                
+                <p><strong>Recognizing</strong> Article 27 of the Universal Declaration of Human Rights, which establishes the right of everyone to freely participate in the cultural life of the community,</p>
+                
+                <p><strong>Emphasizing</strong> General Assembly resolution A/73/227 (2018) on Universality, Cultural Diversity and Cultural Rights, which affirms that cultural diversity strengthens rather than weakens the universality of human rights,</p>
+                
+                <p><strong>Bearing in mind</strong> the International Covenant on Civil and Political Rights and the International Covenant on Economic, Social and Cultural Rights (1966), which together with the UDHR constitute the International Bill of Human Rights,</p>
+                
+                <p><strong>Concerned</strong> by contemporary challenges to the global human rights framework, including rising authoritarianism, selective enforcement, and increasing resistance to international oversight mechanisms,</p>
+
+                <ol>
+                    <li><strong>Calls upon</strong> Member States and international organizations to apply international human rights as a universal minimum standard and honor their commitments to uphold these rights for every person without distinction;</li>
+                    
+                    <li><strong>Encourages</strong> Member States to exchange best practices and cooperate with United Nations bodies, including the Office of the High Commissioner for Human Rights (OHCHR) and UNESCO, to promote culturally informed Human Rights policies;</li>
+                    
+                    <li><strong>Strongly urges</strong> Member States to take into account cultural contexts through dialogue and cooperation by encouraging the establishment of a <strong>Global Human Rights Dialogue Forum</strong> under the auspices of the OHCHR, designed to facilitate exchange between cultural leaders and human rights advocates in order to align domestic law with international human rights conventions;</li>
+                    
+                    <li><strong>Calls upon</strong> Member States to invest in human rights education and public awareness on a broad scale, in order to foster a culture of human rights that resonates within diverse societies by:
+                        <ol>
+                            <li>Integrating human rights education into school curricula at all levels, in a manner that also teaches respect for cultural diversity;</li>
+                            <li>Developing modules that:
+                                <ol>
+                                    <li>Highlight national and local champions of human rights;</li>
+                                    <li>Show how core human rights values (like fairness, dignity, and tolerance) are present in local cultural or religious traditions;</li>
+                                    <li>Encourage critical thinking about cultural practices in light of human rights;</li>
+                                </ol>
+                            </li>
+                            <li>Creating small discussion groups that will be:
+                                <ol>
+                                    <li>Hosted in local community centers;</li>
+                                    <li>Welcoming to every individual and accessible to all;</li>
+                                    <li>Facilitated by specialists and volunteers who will educate people about the purpose of human rights and the United Nations;</li>
+                                </ol>
+                            </li>
+                            <li>Using social media platforms to spread awareness, by:
+                                <ol>
+                                    <li>Uploading statistics and graphs about the aid human rights frameworks have provided;</li>
+                                    <li>Collaborating with organizations and accounts like @unchannel;</li>
+                                    <li>Approaching youth and aspiring activists whose voices are yet to be heard;</li>
+                                </ol>
+                            </li>
+                            <li>Engaging civilians and volunteers to assist UN workers by using media to ensure all groups are educated, using tools such as flyers, TV ads, newspaper articles, and radio;</li>
+                        </ol>
+                    </li>
+                    
+                    <li><strong>Strongly affirms</strong> that all nations must avoid the misuse of cultural relativism by:
+                        <ol>
+                            <li>Strengthening justice systems so that no individual is deprived of truth and the law;</li>
+                            <li>Encouraging civilians to report human rights violations through hotlines or community liaison officers;</li>
+                            <li>Providing training for judges, law enforcement, and public officials to sensitize them to cultural issues while reinforcing that <strong>human rights law supersedes conflicting local customs</strong>;</li>
+                            <li>Ensuring humane conditions in homes, workplaces, and public spaces;</li>
+                        </ol>
+                    </li>
+                    
+                    <li><strong>Calls for</strong> the establishment of an independent United Nations oversight body under the authority of the General Assembly, responsible for reviewing legislation related to human rights, by:
+                        <ol>
+                            <li>Tasking the body to:
+                                <ol>
+                                    <li>Assess national laws and policies for compliance with international human rights instruments;</li>
+                                    <li>Issue non-binding evaluations and recommendations to Member States;</li>
+                                </ol>
+                            </li>
+                            <li>Providing mechanisms for international support when serious violations are identified, through voluntary social and economic assistance and cooperation with national governments;</li>
+                        </ol>
+                    </li>
+                    
+                    <li><strong>Urges</strong> all Member States to intensify their efforts to eliminate discrimination and violence against individuals belonging to marginalized groups, including:
+                        <ol>
+                            <li>Discrimination and violence against women and girls;</li>
+                            <li>Harmful traditional practices, including female genital mutilation and forced marriage;</li>
+                            <li>The criminalization, persecution, or denial of protection of individuals on the basis of sexual orientation or gender identity;</li>
+                            <li>The restriction of fundamental freedoms, including freedom of expression, belief, and association.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 PyleaMUN | Semper Ad Excellentiam
+    </footer>
+
+</body>
+</html>
